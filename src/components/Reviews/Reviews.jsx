@@ -8,7 +8,7 @@ const Reviews = () => {
 const {movieId} = useParams()
     console.log(movieId)
 
-    const [movieReviews, setMovieReviews] = useState([])
+    const [movieReviews, setMovieReviews] = useState(null)
 
    useEffect(() => {
         
@@ -37,6 +37,12 @@ const {movieId} = useParams()
     if (!movieReviews)
     { return null }
     console.log(movieReviews)
+
+    if (movieReviews.length === 0) {
+        return (
+            <div>Oops, no reviews</div>
+        )
+    }
 
 
 
