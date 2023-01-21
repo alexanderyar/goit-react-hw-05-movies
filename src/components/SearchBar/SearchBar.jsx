@@ -1,6 +1,8 @@
 
 import { SearchbarStyle, SearchButton, SearchForm, SearchInput } from "./SearchBar.styled";
 
+import PropTypes from 'prop-types'
+
 export  const SearchBar = ({ onSubmit }) => {
   // console.log(stringQuery)
     return (
@@ -24,4 +26,8 @@ export  const SearchBar = ({ onSubmit }) => {
   </SearchForm>
 </SearchbarStyle>
 )
+}
+
+SearchBar.propTypes = {
+  onSubmit: PropTypes.string
 }
