@@ -1,4 +1,4 @@
-import { getTrending } from "components/api"
+import { getTrending } from "services/api"
 import { useState, useEffect } from "react"
 import { TrendingMoviesList } from "./Home.styled"
 import { ListItem } from "./Home.styled"

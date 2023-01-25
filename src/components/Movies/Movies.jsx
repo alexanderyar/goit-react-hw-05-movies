@@ -1,5 +1,5 @@
 import { SearchBar } from "components/SearchBar/SearchBar"
-import { fetchMoviesByName } from "components/api"
+import { fetchMoviesByName } from "services/api"
 import { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { LinkItem, ListItem, MovieList } from "./Movies.styled";

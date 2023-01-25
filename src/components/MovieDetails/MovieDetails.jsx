@@ -1,4 +1,4 @@
-import { fetchMovieById } from "components/api";
+import { fetchMovieById } from "services/api";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 import { useState, useEffect, Suspense } from "react";
 import { AdditionalInfo, ButtonBack, Container, ContainerForGenres, GenresListItem, Header, HeaderBelow } from "./MovieDetails.styled";
@@ -67,8 +67,8 @@ export const MovieDetails = () => {
             <AdditionalInfo>
                 <p>Additional information</p>
                 <ul>
-                    <li><NavLink to="cast">Cast</NavLink></li>
-                    <li> <NavLink to="reviews">Reviews</NavLink></li>
+                    <li><NavLink to="cast" state={{from: backLinkHref}}>Cast</NavLink></li>
+                    <li> <NavLink to="reviews" state={{from: backLinkHref}}>Reviews</NavLink></li>
                 </ul>
             </AdditionalInfo>
             <Suspense>

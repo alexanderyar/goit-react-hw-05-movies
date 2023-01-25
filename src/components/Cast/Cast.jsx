@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom"
+import { useParams, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { getMovieCredits } from "components/api"
+import { getMovieCredits } from "services/api"
 import { CharacterDescr, ListItem, ProfileName } from "./Cast.styled"
+
 
 
 const Cast = () => {
@@ -10,6 +11,8 @@ const Cast = () => {
     console.log(movieId)
 
     const [movieCredits, setMovieCredits] = useState([])
+
+    // const location = useLocation();
 
    useEffect(() => {
         
@@ -38,6 +41,11 @@ const Cast = () => {
     if (!movieCredits)
     { return null }
   
+    if (movieCredits.length === 0) {
+        return (
+            <div>Oops, no cast info available</div>
+        )
+    }
     
     return (
         <ul>

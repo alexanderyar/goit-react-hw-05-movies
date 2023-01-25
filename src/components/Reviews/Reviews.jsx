@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { getMovieReviews } from "components/api"
+import { getMovieReviews } from "services/api"
 import { ProfileName } from "components/Cast/Cast.styled"
 
 const Reviews = () => {
